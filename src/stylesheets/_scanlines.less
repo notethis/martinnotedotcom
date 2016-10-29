@@ -1,0 +1,78 @@
+/* REGULAR SCANLINES SETTINGS */
+
+    // width of 1 scanline (min.: 1px)
+    @scan-width: 2px;
+
+    // emulates a damage-your-eyes bad pre-2000 CRT screen ♥ (true, false)
+    @scan-crt: true;
+
+    // scanline-color (rgba)
+    @scan-color: rgba(0, 0, 0, .3);
+
+    // set z-index on 8, like in ♥ 8-bits ♥, or…
+    // set z-index on 2147483648 or more to enable scanlines on Chrome fullscreen (doesn't work in Firefox or IE);
+    @scan-z-index: 2147483648;
+
+    /* MOVING SCANLINE SETTINGS */
+
+    // moving scanline (true, false)
+    @scan-moving-line: true;
+
+    // opacity of the moving scanline
+    @scan-opacity: .75;
+
+/* MIXINS */
+
+    // apply CRT animation: @include scan-crt($scan-crt);
+    .scan-crt() {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(180deg,
+            transparent 0px,
+            transparent 1px,
+            rgba(0,0,0,0.25) 1px,
+            rgba(0,0,0,0.25) 2px);
+        opacity: 1;
+        background-size: 4px 3px;
+    }
+
+    // apply CRT animation: @include scan-crt($scan-crt);
+    .scan-moving() {
+        animation: scanline 6s linear infinite;
+    }
+
+/* CSS .scanlines CLASS */
+
+    .scanlines {
+        .scan-crt();
+        overflow: hidden; // only to animate the unique scanline
+
+        &::before,
+        &::after {
+            display: block;
+            pointer-events: none;
+            content: '';
+            position: absolute;
+        }
+
+        // unique scanline travelling on the screen
+        &::after {
+            width: 100%;
+            height: @scan-width * 1;
+            z-index: @scan-z-index + 1;
+            background: @scan-color;
+            opacity: @scan-opacity;
+            // animation: scanline 6s linear infinite;
+            .scan-moving();
+        }
+
+    }
+
+/* ANIMATE UNIQUE SCANLINE */
+    @keyframes scanline {
+        0% {
+            transform: translate3d(0,200000%,0);
+            // bottom: 0%; // to have a continuous scanline move, use this line (here in 0% step) instead of transform and write, in &:before, { position: absolute; bottom: 100%; }
+        }
+    }

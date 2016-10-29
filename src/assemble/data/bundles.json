@@ -1,0 +1,10 @@
+{
+  "vendor": [
+    "lodash",
+    "jquery",
+    "handlebars"
+  ],
+  "main": [
+    "main"
+  ]
+}

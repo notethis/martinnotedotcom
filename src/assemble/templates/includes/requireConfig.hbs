@@ -1,0 +1,19 @@
+<script>
+    // Bootstrap the Demo here.
+    require.config({
+        baseUrl: './',
+        paths: {
+            'vendor': 'javascripts/vendor.min',
+            'main': 'javascripts/main.min'
+        },
+        // Generate list of bundle
+        bundles: {
+            'vendor': {{{json bundles.vendor}}},
+            'main': {{{json bundles.main}}},
+        }
+    });
+
+    require(['vendor', 'main']);
+
+
+</script>

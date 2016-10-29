@@ -1,0 +1,78 @@
+{
+    "name": "martinnotedotcom",
+    "description": "A static landing page for martinnotedotcom.",
+    "version": "0.1.0",
+    "main": "index.html",
+    "license": "UNLICENSED",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/notethis/martinnotedotcom.git"
+    },
+    "author": {
+        "name": "Martin Note",
+        "email": "marty@martinnote.com"
+    },
+    "keywords": [
+    ],
+    "app": {
+        "mainFileName": "main",
+        "paths": {
+            "srcDir": "src",
+            "buildDir": "build",
+            "assembleDir": "src/assemble",
+            "layoutsDir": "src/assemble/templates/layouts",
+            "includesDir": "src/assemble/templates/includes",
+            "pagesDir": "src/assemble/templates/pages",
+            "helpersDir": "src/assemble/helpers",
+            "dataDir": "src/assemble/data",
+            "nodeDir": "node_modules",
+            "bowerDir": "bower_components",
+            "distDir": "dist",
+            "linguaDir": "lingua",
+            "imagesSrcDir": "src/images",
+            "imagesDistDir": "dist/images",
+            "videosSrcDir": "src/videos",
+            "videosDistDir": "dist/videos",
+            "stylesSrcDir": "src/stylesheets",
+            "stylesDistDir": "dist/stylesheets",
+            "javascriptsSrcDir": "src/javascripts",
+            "javascriptsDistDir": "dist/javascripts"
+        },
+        "supportedBrowsers": [
+            "Android >= 4",
+            "Chrome >= 28",
+            "Firefox >= 24",
+            "Explorer >= 10",
+            "iOS >= 6",
+            "Opera >= 12",
+            "Safari >= 6"
+        ],
+        "engines": {
+            "node": "~6.4.0",
+            "npm": "~3.10.0"
+        }
+    },
+    "devDependencies": {
+        "assemble": "^0.4.42",
+        "autoprefixer": "^6.1.0",
+        "bower": "^1.6.5",
+        "bowser": "~1.0.0",
+        "browser-sync": "^2.13.0",
+        "cssnano": "^3.3.2",
+        "grunt": "^0.4.5",
+        "grunt-connect-proxy": "0.1.10",
+        "grunt-contrib-clean": "^0.6.0",
+        "grunt-contrib-connect": "^0.11.2",
+        "grunt-contrib-copy": "^0.8.2",
+        "grunt-contrib-less": "^1.0.1",
+        "grunt-contrib-requirejs": "^1.0.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "grunt-http": "^2.0.1",
+        "grunt-parallel": "^0.4.1",
+        "grunt-postcss": "^0.7.1",
+        "grunt-bump": "0.7.0",
+        "handlebars": "^3.0.3",
+        "lodash": "3.10.1",
+        "requirejs": "^2.2.0"
+    }
+}

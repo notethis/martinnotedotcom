@@ -1,0 +1,15 @@
+# OSX
+.DS_Store
+
+# Node for JS libraries
+node_modules
+
+# Grunt
+_SpecRunner.html
+.grunt
+
+# IDEA
+.idea
+
+#Build
+build/
