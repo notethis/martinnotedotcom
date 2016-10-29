@@ -1,7 +1,7 @@
 {
     "name": "martinnotedotcom",
     "description": "A static landing page for martinnotedotcom.",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "index.html",
     "license": "UNLICENSED",
     "repository": {
