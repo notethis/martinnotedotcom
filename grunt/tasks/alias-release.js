@@ -8,8 +8,6 @@ module.exports = function(grunt) {
             'bump-commit'
         ];
 
-        tasks.push('exec:update-gh-pages');
-
         grunt.task.run(tasks);
     });
 };
