@@ -3,6 +3,18 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+
+    &::after {
+        pointer-events: none;
+        position: absolute;
+        display: block;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        box-shadow: inset 0 0 300px #000;
+    }
 }
 
 .toaster {
